@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(background.jpg);
+  background-size: cover;
+  opacity: 0.9; 
+  z-index: -1;
+  pointer-events: none; 
+}
+
+/* The parent element to trigger the hover */
+.hover-area {
+  height: 90px;
+  width: 100%;
+  position: relative;
+  z-index: 1; /* Ensure it is above the header */
+}
+
+.header {
+  position: absolute;
+  top: -90px; 
+  left: 0;
+  width: 100%;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transform: translateY(-100%);
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+
+}
+
+.hover-area:hover .header {
+  transform: translateY(100%);
+  opacity: 1;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  display: inline;
+  padding: 50px;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  transition: 0.3s;
+  color: white;
+}
+
+li:hover {
+  font-size: 32px;
+  color: #E1D9D1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+
+}
+
+.text{
+
+  margin: auto;
+  margin-top: 135px;
+  width: 64%;
+  height: 200px;
+
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+h1{
+
+  font-size: 80px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
+
+}
+
+span{
+
+  color: red;
+}
+
+p{
+
+  font-size: 30px;
+  color:whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

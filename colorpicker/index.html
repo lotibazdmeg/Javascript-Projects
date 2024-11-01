@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COLOR PICKER</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="inner_container">
+      <label class="red">RED:</label>
+      <input type="range" min="0" max="255" class="input1" id="i1">
+      <label class="green">GREEN:</label>
+      <input type="range" min="0" max="255" class="input2" id="i2">
+      <label class="blue">BLUE:</label>
+      <input type="range" min="0" max="255" class="input3" id="i3">
+      <ul>
+        <li>Value: <span id="s1"></span></li>
+        <li>Value: <span id="s2"></span></li>
+        <li>Value: <span id="s3"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="the_color" id="the_color"></div>
+  <button id ="copy" onclick="myFunction()">COPY</button>
+  <script src="script.js"></script>
+</body>
+</html>

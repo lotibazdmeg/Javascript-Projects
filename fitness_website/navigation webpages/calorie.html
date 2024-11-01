@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Calculator</title>
+  <link rel="stylesheet" href="calorie.css">
+</head>
+<body>
+  <div class="home">
+  <h4><a href="/fitness pj/index.html">Go back home</a></h4>
+</div>
+  <div class="container">
+    <form id="calorie-form">
+      <div class="form-group">
+        <h4>Age:</h4>
+        <input type="number" id="age" class="age" min="15" max="85" placeholder="15-85" required>
+        <span id="error-message" style="color: red; display: none;">Please enter a number between 15 and 85.</span>
+      </div>
+  
+      <div class="form-group">
+        <h4>Gender:</h4>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <h4>Height:</h4>
+        <input type="number" id="height" class="height" placeholder="In cm" required>
+      </div>
+  
+      <div class="form-group">
+        <h4>Weight:</h4>
+        <input type="number" id="weight" class="weight" placeholder="In kg" required>  
+      </div>
+    
+      <div class="form-group">
+        <h4>Activity:</h4>
+        <select name="activity" id="activity">
+          <option value="sedentary">Sedentary</option>
+          <option value="light">Light Exercise</option>
+          <option value="active">Active</option>
+          <option value="very_active">Very Active</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <button type="button" id="calc" onclick="calculate()">Calculate</button>
+      </div>
+  
+      <div class="form-group">
+        <h4 id="result"></h4>
+      </div>
+    </form>
+  </div>
+  <script src="calorie.js"></script>
+</body>
+</html>
+
